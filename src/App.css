@@ -15,3 +15,9 @@
 body {
   font-family: var(--font-roboto);
 }
+
+@media (max-width: 600px) {
+  .shareIcon {
+    display: none;
+  }
+}
