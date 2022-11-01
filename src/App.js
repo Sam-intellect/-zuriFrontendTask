@@ -33,9 +33,12 @@ const App = () => {
 
         <div className="flex flex-col">
           <div className=" flex flex-col gap-4 justify-center items-center p-6">
-            <img src={Profile} alt="profileImg" />
-            <h2 className="font-bold text-2xl font-mono">
+            <img src={Profile} alt="profileImg" id="profile__img" />
+            <h2 className="font-bold text-2xl font-mono" id="twitter">
               Aluko Olakunle Samuel
+            </h2>
+            <h2 id="slack" hidden>
+              Sam_dev
             </h2>
           </div>
           <div className="flex flex-col gap-5 mx-5 mt-10 md:mt-20">
