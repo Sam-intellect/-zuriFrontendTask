@@ -11,7 +11,7 @@ import Profile from "./profile__img.png";
 const App = () => {
   return (
     <>
-      <div className="container mx-auto mt-10 md:mt-32">
+      <div className="container linktree mx-auto mt-10 md:mt-32">
         <div className="flex justify-end mr-10 md:mr-64">
           <div className="rounded-full border-2 border-black shadow-inner shadow-lg w-14 h-14 items-center p-2">
             <button>
