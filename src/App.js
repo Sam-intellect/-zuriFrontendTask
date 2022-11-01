@@ -35,7 +35,7 @@ const App = () => {
           <div className=" flex flex-col gap-4 justify-center items-center p-6">
             <img src={Profile} alt="profileImg" id="profile__img" />
             <h2 className="font-bold text-2xl font-mono" id="twitter">
-              @AlukoKunleSam
+              AlukoKunleSam
             </h2>
             <h2 id="slack" hidden>
               Sam_dev
