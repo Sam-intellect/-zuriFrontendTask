@@ -45,32 +45,32 @@ const App = () => {
             <LinksButton
               name={"Twitter"}
               links={"https://twitter.com/AlukoKunleSam"}
-              id="twitter"
             />
+
             <LinksButton
               name={"Zuri Team"}
               links={`https://training.zuri.team/`}
-              id="btn__zuri"
+              id={"btn__zuri"}
             />
             <LinksButton
               name={"Zuri Books"}
               links={` http://books.zuri.team `}
-              id="books"
+              id={"books"}
             />
             <LinksButton
               name={"Python Books"}
               links={`https://books.zuri.team//python-for-beginners?ref_id=Sam_dev`}
-              id="book__python"
+              id={"book__python"}
             />
             <LinksButton
               name={"Background Check for Coders"}
               links={`https://background.zuri.team`}
-              id="pitch"
+              id={"pitch"}
             />
             <LinksButton
               name={"Design Books"}
               links={`https://books.zuri.team/design-rules`}
-              id="book__design"
+              id={"book__design"}
             />
 
             <div className="flex flex-row justify-center gap-4">
