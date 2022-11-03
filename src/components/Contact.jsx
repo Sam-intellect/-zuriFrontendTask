@@ -1,6 +1,6 @@
 import React from 'react';
 
-const name = `{name}`;
+const name = 'Samuel';
 
 const Contact = () => {
   return (
