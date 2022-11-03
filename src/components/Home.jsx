@@ -66,7 +66,7 @@ const Home = () => {
             />
             <LinksButton
               name={'Contact Me'}
-              links={`https://books.zuri.team/design-rules`}
+              links={'/contact'}
               id={'contact'}
             />
 

@@ -3,13 +3,14 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 
 import { Routes, Route } from 'react-router-dom';
+import Contact from './components/Contact';
 
 const App = () => {
   return (
     <>
       <Routes>
-        <Route path="" />
-        <Home />
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </>
