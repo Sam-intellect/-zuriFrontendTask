@@ -1,10 +1,12 @@
 import React from 'react';
 
+const name = `{name}`;
+
 const Contact = () => {
   return (
     <>
       <div className="container linktree mx-5 mt-20 md:mx-auto">
-        <div className="flex flex-col gap-4 md:mx-64  md:m-64 md:gap-10">
+        <div className="flex flex-col gap-4  md:m-64 md:mt-1 md:gap-10">
           <h1 className="text-3xl md:text-5xl  font-bold text-black font-sand">
             Contact Me
           </h1>
@@ -12,7 +14,7 @@ const Contact = () => {
             Hi there, contact me to ask me about anything you have in mind.
           </p>
 
-          <form action="" className="mt-16 mr-10">
+          <form action="" className="mt-5 md:mt-16 mr-10">
             <div className="flex md:flex-row flex-col gap-10 md:gap-16">
               <div className="md:w-1/2">
                 <label for="" className="block text-xl md:text-3xl">
@@ -20,7 +22,7 @@ const Contact = () => {
                 </label>
                 <div className="mt-1">
                   <input
-                    id="first__name"
+                    id="first_name"
                     name="firstName"
                     type="text"
                     className="mt-1 px-3 py-2 h-16 text-2xl w-full border-dotted border-2 border-gray-500 rounded-lg shadow-sm"
@@ -36,8 +38,8 @@ const Contact = () => {
                 </label>
                 <div className="mt-1">
                   <input
-                    id="first__name"
-                    name="firstName"
+                    id="last_name"
+                    name="last Name"
                     type="text"
                     className="mt-1 px-3 py-2 h-16 text-2xl w-full border-dotted border-2 border-gray-500 rounded-lg shadow-sm"
                     placeholder="Enter your last name"
@@ -47,7 +49,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="mt-16">
+            <div className="mt-8 md:mt-16">
               <label for="" className="block text-xl md:text-3xl">
                 Email
               </label>
@@ -62,7 +64,7 @@ const Contact = () => {
                 />
               </div>
             </div>
-            <div className="mt-16">
+            <div className="mt-8 md:mt-16">
               <label for="" className="block text-xl md:text-3xl">
                 Message
               </label>
@@ -76,20 +78,33 @@ const Contact = () => {
                   required
                 />
               </div>
-            </div>
-            {/* <label class="block">
-                Email
+
+              <div className="flex mt-8 gap-4">
                 <input
-                  type="email"
-                  name="email"
-                  class="mt-1 px-3 py-2 bg-white border-black focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
-                  placeholder="you@example.com"
+                  id="link-checkbox"
+                  type="checkbox"
+                  value=""
+                  class="w-6 h-6 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500"
                 />
-              </label> */}
+                <label
+                  for="link-checkbox"
+                  class="mb-2 text-xl font-medium text-black"
+                >
+                  You agree to providing your data to {name} who may contact
+                  you.
+                </label>
+              </div>
+            </div>
           </form>
+          <button
+            class="bg-blue p-3 mr-10 rounded-lg text-white text-2xl text-bold font-sand drop-shadow-lg"
+            id="btn__submit"
+          >
+            Send message
+          </button>
         </div>
       </div>
-      <hr className="bg-grey h-1 mt-32 md:mx-32" />
+      <hr className="bg-grey h-1 mt-16 md:mx-32" />
     </>
   );
 };
