@@ -14,6 +14,7 @@ module.exports = {
       colors: {
         grey: '#EAECF0',
         blue: '#1570EF',
+        red: '#FF0000',
       },
       fontFamily: {
         mono: ["'DM Mono'", ...defaultTheme.fontFamily.mono],
