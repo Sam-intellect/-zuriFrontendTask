@@ -9,15 +9,18 @@ const Contact = () => {
     lastName: '',
     email: '',
     message: '',
-    checkbox: '',
+    agree: false,
   };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormValues({ ...formValues, [name]: value });
+    const { name, value, type, checked } = e.target;
+    setFormValues({
+      ...formValues,
+      [name]: type === 'checked' ? checked : value,
+    });
   };
 
   const handleSubmit = (e) => {
@@ -51,8 +54,8 @@ const Contact = () => {
     if (!values.message) {
       errors.message = 'Message is required!';
     }
-    if (!values.checkbox) {
-      errors.checkbox = 'Aggreement is required!';
+    if (!values.agree) {
+      errors.agree = 'Agreement is required!';
     }
 
     return errors;
@@ -60,7 +63,9 @@ const Contact = () => {
 
   return (
     <>
-      {/* <pre>{JSON.stringify(formValues, undefined, 2)}</pre> */}
+      {/* {Object.keys(formErrors).length === 0 && isSubmit
+        ? alert('SUCCESSFUL')
+        : console.log(formValues)} */}
       <div className="container linktree mx-5 mt-10 md:mt-20 md:mx-auto">
         <div className="flex flex-col gap-4  md:m-64 md:mt-1 md:gap-10">
           <h1 className="text-3xl md:text-5xl  font-bold text-black font-sand">
@@ -147,7 +152,8 @@ const Contact = () => {
                 <input
                   id="link-checkbox"
                   type="checkbox"
-                  value={formValues.checkbox}
+                  name="agree"
+                  value={formValues.agree}
                   onChange={handleChange}
                   class="w-6 h-6 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500"
                 />
@@ -155,7 +161,7 @@ const Contact = () => {
                   You agree to providing your data to {name} who may contact
                   you.
                 </label>
-                <p className="text-red">{formErrors.checkbox}</p>
+                <p className="text-red">{formErrors.agree}</p>
               </div>
             </div>
             <button
