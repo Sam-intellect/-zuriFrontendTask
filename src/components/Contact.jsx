@@ -24,6 +24,7 @@ const Contact = () => {
     });
   };
 
+  // for form submit
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
@@ -37,6 +38,7 @@ const Contact = () => {
     }
   }, [formErrors, formValues, isSubmit]);
 
+  // Logic for Validation of form
   const validate = (values) => {
     const errors = {};
     const regEx = /[a-zA-Z0-9._%+-]+@[a-z0-9-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
@@ -64,11 +66,14 @@ const Contact = () => {
 
   return (
     <>
+      {/* This check if all input feed is validate, then return to Home page */}
       {Object.keys(formErrors).length === 0 && isSubmit ? (
         <Home />
       ) : (
         console.log(formValues)
       )}
+
+      {/* Beginning of the form */}
       <div className="container linktree mx-5 mt-10 md:mt-20 md:mx-auto">
         <div className="flex flex-col gap-4  md:m-64 md:mt-1 md:gap-10">
           <h1 className="text-3xl md:text-5xl  font-bold text-black font-sand">
