@@ -66,13 +66,6 @@ const Contact = () => {
 
   return (
     <>
-      {/* This check if all input feed is validate, then return to Home page */}
-      {Object.keys(formErrors).length === 0 && isSubmit ? (
-        <Home />
-      ) : (
-        console.log(formValues)
-      )}
-
       {/* Beginning of the form */}
       <div className="container linktree mx-5 mt-10 md:mt-20 md:mx-auto">
         <div className="flex flex-col gap-4  md:m-64 md:mt-1 md:gap-10">
