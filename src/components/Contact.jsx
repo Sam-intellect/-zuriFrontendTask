@@ -1,8 +1,22 @@
-import React from 'react';
-
-const name = 'Samuel';
+import { React } from 'react';
+import { useState } from 'react';
 
 const Contact = () => {
+  const name = 'Samuel';
+
+  const initialValues = { firstName: '', lastName: '', email: '', message: '' };
+  const [formValues, setFormValues] = useState(initialValues);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
+    console.log(formValues);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <>
       <div className="container linktree mx-5 mt-10 md:mt-20 md:mx-auto">
@@ -14,7 +28,11 @@ const Contact = () => {
             Hi there, contact me to ask me about anything you have in mind.
           </p>
 
-          <form action="" className="mt-5 md:mt-16 mr-10">
+          <form
+            action=""
+            className="mt-5 md:mt-16 mr-10"
+            onSubmit={handleSubmit}
+          >
             <div className="flex md:flex-row flex-col gap-10 md:gap-16">
               <div className="md:w-1/2">
                 <label for="" className="block text-xl md:text-3xl">
@@ -25,6 +43,8 @@ const Contact = () => {
                     id="first_name"
                     name="firstName"
                     type="text"
+                    value={formValues.firstName}
+                    onChange={handleChange}
                     className="mt-1 px-3 py-2 md:h-16 md:text-2xl w-full border-solid border-2 border-gray-500 rounded-lg shadow-sm"
                     placeholder="Enter your first name"
                     required
@@ -39,8 +59,10 @@ const Contact = () => {
                 <div className="mt-1">
                   <input
                     id="last_name"
-                    name="last Name"
+                    name="lastName"
                     type="text"
+                    value={formValues.lastName}
+                    onChange={handleChange}
                     className="mt-1 px-3 py-2 md:h-16 md:text-2xl w-full border-solid border-2 border-gray-500 rounded-lg shadow-sm"
                     placeholder="Enter your last name"
                     required
@@ -58,6 +80,8 @@ const Contact = () => {
                   id="email"
                   name="email"
                   type="email"
+                  value={formValues.email}
+                  onChange={handleChange}
                   className="mt-1 px-3 py-2 md:h-16  md:text-2xl w-full border-solid border-2 border-gray-500 rounded-lg shadow-sm"
                   placeholder="yourname@email.com"
                   required
@@ -73,6 +97,8 @@ const Contact = () => {
                   id="message"
                   name="message"
                   type="text"
+                  value={formValues.message}
+                  onChange={handleChange}
                   className="mt-1 px-3 py-2 h-40 md:h-40 md:text-2xl w-full border-solid border-2 border-gray-500 rounded-lg shadow-sm"
                   placeholder="Send me a message and I'll reply you as soon as possible..."
                   required
