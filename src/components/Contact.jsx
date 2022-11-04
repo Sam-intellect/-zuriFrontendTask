@@ -36,7 +36,7 @@ const Contact = () => {
 
   const goHome = (e) => {
     Object.keys(formErrors).length === 0 && isSubmit
-      ? navigate('/home')
+      ? navigate('/')
       : console.log(Error);
   };
 
