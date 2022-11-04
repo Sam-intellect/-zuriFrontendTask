@@ -5,7 +5,7 @@ const name = 'Samuel';
 const Contact = () => {
   return (
     <>
-      <div className="container linktree mx-5 mt-20 md:mx-auto">
+      <div className="container linktree mx-5 mt-10 md:mt-20 md:mx-auto">
         <div className="flex flex-col gap-4  md:m-64 md:mt-1 md:gap-10">
           <h1 className="text-3xl md:text-5xl  font-bold text-black font-sand">
             Contact Me
@@ -25,7 +25,7 @@ const Contact = () => {
                     id="first_name"
                     name="firstName"
                     type="text"
-                    className="mt-1 px-3 py-2 h-16 text-2xl w-full border-dotted border-2 border-gray-500 rounded-lg shadow-sm"
+                    className="mt-1 px-3 py-2 md:h-16 md:text-2xl w-full border-solid border-2 border-gray-500 rounded-lg shadow-sm"
                     placeholder="Enter your first name"
                     required
                   />
@@ -41,7 +41,7 @@ const Contact = () => {
                     id="last_name"
                     name="last Name"
                     type="text"
-                    className="mt-1 px-3 py-2 h-16 text-2xl w-full border-dotted border-2 border-gray-500 rounded-lg shadow-sm"
+                    className="mt-1 px-3 py-2 md:h-16 md:text-2xl w-full border-solid border-2 border-gray-500 rounded-lg shadow-sm"
                     placeholder="Enter your last name"
                     required
                   />
@@ -58,7 +58,7 @@ const Contact = () => {
                   id="email"
                   name="email"
                   type="email"
-                  className="mt-1 px-3 py-2 h-16 text-2xl w-full border-dotted border-2 border-gray-500 rounded-lg shadow-sm"
+                  className="mt-1 px-3 py-2 md:h-16  md:text-2xl w-full border-solid border-2 border-gray-500 rounded-lg shadow-sm"
                   placeholder="yourname@email.com"
                   required
                 />
@@ -73,7 +73,7 @@ const Contact = () => {
                   id="message"
                   name="message"
                   type="text"
-                  className="mt-1 px-3 py-2 h-40 text-2xl w-full border-dotted border-2 border-gray-500 rounded-lg shadow-sm"
+                  className="mt-1 px-3 py-2 h-40 md:h-40 md:text-2xl w-full border-solid border-2 border-gray-500 rounded-lg shadow-sm"
                   placeholder="Send me a message and I'll reply you as soon as possible..."
                   required
                 />
