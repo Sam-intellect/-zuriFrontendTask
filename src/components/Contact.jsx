@@ -1,6 +1,6 @@
 import { React } from 'react';
 import { useState, useEffect } from 'react';
-import Home from './Home';
+import { useNavigate } from 'react-router-dom';
 
 const Contact = () => {
   const name = 'Samuel';
@@ -29,6 +29,15 @@ const Contact = () => {
     e.preventDefault();
     setFormErrors(validate(formValues));
     setIsSubmit(true);
+  };
+
+  // This will redirect to the home page
+  const navigate = useNavigate();
+
+  const goHome = (e) => {
+    Object.keys(formErrors).length === 0 && isSubmit
+      ? navigate('/home')
+      : console.log(Error);
   };
 
   useEffect(() => {
@@ -66,13 +75,6 @@ const Contact = () => {
 
   return (
     <>
-      {/* This check if all input feed is validate, then return to Home page */}
-      {Object.keys(formErrors).length === 0 && isSubmit ? (
-        <Home />
-      ) : (
-        console.log(formValues)
-      )}
-
       {/* Beginning of the form */}
       <div className="container linktree mx-5 mt-10 md:mt-20 md:mx-auto">
         <div className="flex flex-col gap-4  md:m-64 md:mt-1 md:gap-10">
@@ -173,6 +175,7 @@ const Contact = () => {
               </div>
             </div>
             <button
+              onClick={goHome}
               class="bg-blue p-3 mr-10 mt-11 rounded-lg text-white w-full text-2xl text-bold font-sand drop-shadow-lg"
               id="btn__submit"
             >
