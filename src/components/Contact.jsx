@@ -1,5 +1,6 @@
 import { React } from 'react';
 import { useState, useEffect } from 'react';
+import Home from './Home';
 
 const Contact = () => {
   const name = 'Samuel';
@@ -63,9 +64,11 @@ const Contact = () => {
 
   return (
     <>
-      {/* {Object.keys(formErrors).length === 0 && isSubmit
-        ? alert('SUCCESSFUL')
-        : console.log(formValues)} */}
+      {Object.keys(formErrors).length === 0 && isSubmit ? (
+        <Home />
+      ) : (
+        console.log(formValues)
+      )}
       <div className="container linktree mx-5 mt-10 md:mt-20 md:mx-auto">
         <div className="flex flex-col gap-4  md:m-64 md:mt-1 md:gap-10">
           <h1 className="text-3xl md:text-5xl  font-bold text-black font-sand">
