@@ -89,57 +89,52 @@ const Contact = () => {
           <form className="mt-5 md:mt-16 mr-10" onSubmit={handleSubmit}>
             <div className="flex md:flex-row flex-col gap-10 md:gap-16">
               <div className="md:w-1/2">
-                <label for="" className="block text-xl md:text-3xl">
-                  First name
-                </label>
-                <div className="mt-1">
-                  <InputFieldContact
-                    id={'first_name'}
-                    name={'firstName'}
-                    type={'text'}
-                    value={formValues.firstName}
-                    onChange={handleChange}
-                    placeholder={'Enter your first name'}
-                  />
-                </div>
+                {/* First Name field */}
+                <InputFieldContact
+                  label={'First name'}
+                  id={'first_name'}
+                  name={'firstName'}
+                  type={'text'}
+                  value={formValues.firstName}
+                  change={handleChange}
+                  placeholder={'Enter your first name'}
+                />
+
                 <p className="text-red">{formErrors.firstName}</p>
               </div>
 
+              {/* Last Name field */}
               <div className="md:w-1/2">
-                <label for="" className="block text-xl md:text-3xl">
-                  Last name
-                </label>
-                <div className="mt-1">
-                  <InputFieldContact
-                    id={'last_name'}
-                    name={'lastName'}
-                    type={'text'}
-                    value={formValues.lastName}
-                    onChange={handleChange}
-                    placeholder={'Enter your last name'}
-                  />
-                </div>
+                <InputFieldContact
+                  label={'Last name'}
+                  id={'last_name'}
+                  name={'lastName'}
+                  type={'text'}
+                  value={formValues.lastName}
+                  change={handleChange}
+                  placeholder={'Enter your last name'}
+                />
+
                 <p className="text-red">{formErrors.lastName}</p>
               </div>
             </div>
 
+            {/* Email field */}
             <div className="mt-8 md:mt-16">
-              <label for="" className="block text-xl md:text-3xl">
-                Email
-              </label>
-              <div className="mt-1">
-                <input
-                  id="email"
-                  name="email"
-                  type="text"
-                  value={formValues.email}
-                  onChange={handleChange}
-                  className="mt-1 px-3 py-2 md:h-16  md:text-2xl w-full border-solid border-2 border-gray-500 rounded-lg shadow-sm"
-                  placeholder="yourname@email.com"
-                />
-              </div>
+              <InputFieldContact
+                label={'Email'}
+                id={'email'}
+                name={'email'}
+                type={'text'}
+                value={formValues.email}
+                change={handleChange}
+                placeholder={'yourname@email.com'}
+              />
+
               <p className="text-red">{formErrors.email}</p>
             </div>
+
+            {/* Message field */}
             <div className="mt-8 md:mt-16">
               <label for="" className="block text-xl md:text-3xl">
                 Message
@@ -157,6 +152,7 @@ const Contact = () => {
                 <p className="text-red">{formErrors.message}</p>
               </div>
 
+              {/* Agreementfield */}
               <div className="flex mt-8 gap-4">
                 <input
                   id="link-checkbox"
@@ -164,7 +160,7 @@ const Contact = () => {
                   name="agree"
                   value={formValues.agree}
                   onChange={handleChange}
-                  class="w-6 h-6 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500"
+                  className="w-6 h-6 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500"
                 />
                 <label class="mb-2 text-xl font-medium text-black">
                   You agree to providing your data to {name} who may contact
@@ -173,6 +169,8 @@ const Contact = () => {
                 <p className="text-red">{formErrors.agree}</p>
               </div>
             </div>
+
+            {/* submit button */}
             <button
               onClick={goHome}
               class="bg-blue p-3 mr-10 mt-11 rounded-lg text-white w-full text-2xl text-bold font-sand drop-shadow-lg"
