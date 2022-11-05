@@ -1,4 +1,5 @@
 import { React } from 'react';
+import InputFieldContact from './InputFieldContact';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -92,14 +93,13 @@ const Contact = () => {
                   First name
                 </label>
                 <div className="mt-1">
-                  <input
-                    id="first_name"
-                    name="firstName"
-                    type="text"
+                  <InputFieldContact
+                    id={'first_name'}
+                    name={'firstName'}
+                    type={'text'}
                     value={formValues.firstName}
                     onChange={handleChange}
-                    className="mt-1 px-3 py-2 md:h-16 md:text-2xl w-full border-solid border-2 border-gray-500 rounded-lg shadow-sm"
-                    placeholder="Enter your first name"
+                    placeholder={'Enter your first name'}
                   />
                 </div>
                 <p className="text-red">{formErrors.firstName}</p>
@@ -110,14 +110,13 @@ const Contact = () => {
                   Last name
                 </label>
                 <div className="mt-1">
-                  <input
-                    id="last_name"
-                    name="lastName"
-                    type="text"
+                  <InputFieldContact
+                    id={'last_name'}
+                    name={'lastName'}
+                    type={'text'}
                     value={formValues.lastName}
                     onChange={handleChange}
-                    className="mt-1 px-3 py-2 md:h-16 md:text-2xl w-full border-solid border-2 border-gray-500 rounded-lg shadow-sm"
-                    placeholder="Enter your last name"
+                    placeholder={'Enter your last name'}
                   />
                 </div>
                 <p className="text-red">{formErrors.lastName}</p>
